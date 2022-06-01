@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipeRefreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+<ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Control Parameter"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="28sp"
+            android:layout_gravity="center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status"
+            android:textColor="@color/colorOrange"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+        <TableLayout
+            android:id="@+id/table1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow>
+                <Space android:layout_width="20dp"
+                       android:layout_height="wrap_content"/>
+            </TableRow>
+
+            <TableRow>
+                <Space android:layout_width="5dp"
+                       android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Connection:"
+                    android:textSize="20sp"/>
+
+                <Space android:layout_width="6dp"
+                       android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tv_connection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Connection"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    />
+            </TableRow>
+
+            <TableRow>
+
+                <Space android:layout_width="6dp"
+                       android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Device ID:"
+                    android:textSize="18sp"/>
+
+                <Space android:layout_width="6dp"
+                       android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tv_device_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" ID"
+                    android:textSize="18sp"/>
+
+            </TableRow>
+            <TableRow>
+
+                <Space android:layout_width="6dp"
+                       android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Firmware version:"
+                    android:textSize="18sp"/>
+
+                <Space android:layout_width="6dp"
+                       android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tv_firmware"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="version"
+                    android:textSize="18sp"/>
+
+            </TableRow>
+            <TableRow>
+
+                <Space android:layout_width="6dp"
+                       android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Battery level:"
+                    android:textSize="18sp"/>
+
+                <Space android:layout_width="6dp"
+                       android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tv_battery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="battery level"
+                    android:textSize="18sp"/>
+
+            </TableRow>
+            <TableRow>
+                <Space android:layout_width="6dp"
+                       android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Transmission rate:"
+                    android:textSize="18sp"
+                    android:layout_gravity="center"/>
+
+                <Space android:layout_width="6dp"
+                       android:layout_height="wrap_content"/>
+
+                <Spinner
+                    android:id="@+id/spinner_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/freq"
+                    android:textSize="12sp"
+                    android:spinnerMode="dropdown"/>
+
+            </TableRow>
+
+
+
+        </TableLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Range"
+            android:textColor="@color/colorOrange"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow>
+                <Space android:layout_width="20dp"
+                       android:layout_height="wrap_content"/>
+            </TableRow>
+
+            <TableRow>
+                <Space android:layout_width="6dp"
+                       android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GYR range:"
+                    android:textSize="18sp"/>
+                <Space android:layout_width="6dp"
+                       android:layout_height="wrap_content"/>
+                <Spinner
+                    android:id="@+id/spinner_GYR_range"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/gyrRange"
+                    android:textSize="12sp"
+                    android:spinnerMode="dropdown"/>
+            </TableRow>
+
+            <TableRow>
+                <Space android:layout_width="6dp"
+                       android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ACC range:"
+                    android:textSize="18sp"/>
+                <Space android:layout_width="6dp"
+                       android:layout_height="wrap_content"/>
+                <Spinner
+                    android:id="@+id/spinner_ACC_range"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/accRange"
+                    android:textSize="12sp"
+                    android:spinnerMode="dropdown"/>
+            </TableRow>
+            <TableRow>
+                <Space android:layout_width="6dp"
+                       android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MAG range:"
+                    android:textSize="18sp"/>
+                <Space android:layout_width="6dp"
+                       android:layout_height="wrap_content"/>
+                <Spinner
+                    android:id="@+id/spinner_MAG_range"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/magRange"
+                    android:textSize="12sp"
+                    android:spinnerMode="dropdown"/>
+            </TableRow>
+        </TableLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Filter"
+            android:textColor="@color/colorOrange"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TableRow>
+                <Space android:layout_width="20dp"
+                       android:layout_height="wrap_content"/>
+            </TableRow>
+            <TableRow>
+                <Space android:layout_width="6dp"
+                       android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Filter mode:"
+                    android:textSize="18sp"/>
+                <Space android:layout_width="6dp"
+                       android:layout_height="wrap_content"/>
+                <Spinner
+                    android:id="@+id/spinner_Filter_mode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/filterMode"
+                    android:textSize="12sp"
+                    android:spinnerMode="dropdown"/>
+            </TableRow>
+
+            <TableRow>
+                <Space android:layout_width="6dp"
+                       android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MAG correction:"
+                    android:textSize="18sp"/>
+                <Space android:layout_width="6dp"
+                       android:layout_height="wrap_content"/>
+                <Spinner
+                    android:id="@+id/spinner_MAG_correction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/magCorrection"
+                    android:textSize="12sp"
+                    />
+            </TableRow>
+            <TableRow>
+                <Space android:layout_width="6dp"
+                       android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Low-Pass filter:"
+                    android:textSize="18sp"/>
+                <Space android:layout_width="6dp"
+                       android:layout_height="wrap_content"/>
+                <Spinner
+                    android:id="@+id/spinner_Low_pass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/lowPassFilter"
+                    android:textSize="12sp"
+                    />
+            </TableRow>
+
+        </TableLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Data"
+            android:textColor="@color/colorOrange"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TableRow>
+                <Space android:layout_width="20dp"
+                       android:layout_height="wrap_content"/>
+            </TableRow>
+            <TableRow>
+                <Space android:layout_width="6dp"
+                       android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LPBUS data mode:"
+                    android:textSize="18sp"
+                    android:layout_gravity="center"/>
+                <Space android:layout_width="6dp"
+                       android:layout_height="wrap_content"/>
+                <Spinner
+                    android:id="@+id/spinner_data_mode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/dataMode"
+                    android:textSize="12sp"/>
+            </TableRow>
+
+
+            <TableRow>
+                <Space android:layout_width="6dp"
+                       android:layout_height="wrap_content"/>
+                <Button
+                    android:textAllCaps="false"
+                    android:id="@+id/btn_sendCommand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enabled Data:"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    />
+
+                <Space android:layout_width="6dp"
+                       android:layout_height="wrap_content"/>
+                <CheckBox
+                    android:id="@+id/cb_raw_acc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Raw accelerometer"
+                    android:textSize="12sp"
+                    android:checked="false"/>
+            </TableRow>
+            <TableRow>
+                <CheckBox
+                    android:id="@+id/cb_raw_mag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Raw magnetometer"
+                    android:textSize="12sp"
+                    android:layout_column="3"/>
+            </TableRow>
+            <TableRow>
+                <CheckBox
+                    android:id="@+id/cb_raw_gyr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Raw gyroscope"
+                    android:textSize="12sp"
+                    android:layout_column="3"/>
+            </TableRow>
+
+            <TableRow>
+                <CheckBox
+                    android:id="@+id/cb_angularVel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Angular Velocity"
+                    android:textSize="12sp"
+                    android:layout_column="3"/>
+            </TableRow>
+
+            <TableRow>
+                <CheckBox
+                    android:id="@+id/cb_quaternion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Quaternion"
+                    android:layout_column="3"
+                    android:textSize="12sp"/>
+            </TableRow>
+            <TableRow>
+                <CheckBox
+                    android:id="@+id/cb_euler_angle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Euler angle"
+                    android:textSize="12sp"
+                    android:layout_column="3"/>
+            </TableRow>
+            <TableRow>
+                <CheckBox
+                    android:id="@+id/cb_lin_acc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lin. acceleration"
+                    android:textSize="12sp"
+                    android:layout_column="3"/>
+            </TableRow>
+            <TableRow>
+                <CheckBox
+                    android:id="@+id/cb_bar_pressure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bar. pressure"
+                    android:textSize="12sp"
+                    android:layout_column="3"/>
+            </TableRow>
+
+            <TableRow>
+                <CheckBox
+                    android:id="@+id/cb_altitude"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Altitude Data"
+                    android:textSize="12sp"
+                    android:layout_column="3"/>
+            </TableRow>
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/cb_temperature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Temperature Data"
+                    android:textSize="12sp"
+                    android:layout_column="3"/>
+            </TableRow>
+
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:textAllCaps="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Streaming Mode"
+                android:id="@+id/btn_streamingmode"
+                android:layout_gravity="center_horizontal"/>
+
+            <Button
+                android:textAllCaps="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Command Mode"
+                android:id="@+id/btn_commandmode"
+                android:layout_gravity="center_horizontal"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>
+</android.support.v4.widget.SwipeRefreshLayout>

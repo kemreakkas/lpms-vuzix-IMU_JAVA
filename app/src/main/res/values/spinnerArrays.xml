@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="freq" translatable="false">
+        <item>5 Hz</item>
+        <item>10 Hz</item>
+        <item>25 Hz</item>
+        <item>50 Hz</item>
+        <item>100 Hz</item>
+        <item>200 Hz</item>
+        <item>400 Hz</item>
+    </string-array>
+
+    <string-array name="gyrRange" translatable="false">
+        <item>125 dps</item>
+        <item>245 dps</item>
+        <item>500 dps</item>
+        <item>1000 dps</item>
+        <item>2000 dps</item>
+    </string-array>
+
+    <string-array name="accRange" translatable="false">
+        <item>2  G</item>
+        <item>4  G</item>
+        <item>8  G</item>
+        <item>16 G</item>
+    </string-array>
+
+    <string-array name="magRange" translatable="false">
+        <item>2  Gauss</item>
+        <item>8  Gauss</item>
+        <item>12 Gauss</item>
+        <item>16 Gauss</item>
+    </string-array>
+
+    <string-array name="filterMode" translatable="false">
+        <item>Gyr only</item>
+        <item>Gyr + Acc(Kalman)</item>
+        <item>Gyr+Acc+Mag(Kalman)</item>
+        <item>Gyr + Acc(DCM)</item>
+        <item>Gyr+Acc+Mag(DCM)</item>
+    </string-array>
+
+    <string-array name="magCorrection" translatable="false">
+        <item>Weak</item>
+        <item>Medium</item>
+        <item>Strong</item>
+        <item>Dynamic</item>
+    </string-array>
+
+    <string-array name="lowPassFilter" translatable="false">
+        <item>Off</item>
+        <item>0.1</item>
+        <item>0.05</item>
+        <item>0.01</item>
+        <item>0.005</item>
+        <item>0.001</item>
+    </string-array>
+
+    <string-array name="dataMode" translatable="false">
+        <item>32-bit floating point</item>
+        <item>16-bit integer</item>
+    </string-array>
+
+</resources>

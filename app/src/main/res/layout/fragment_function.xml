@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:weightSum="1"
+              android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Function"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="28sp"
+        android:layout_gravity="center"
+        />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:columnCount="3"
+        android:rowCount="3"
+        >
+
+        <cn.alubi.myapplication.Adapter.ImageTextButton
+            android:id="@+id/btn_logging"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/my_margin"
+            android:layout_marginRight="@dimen/my_margin"
+            android:layout_marginBottom="@dimen/my_margin"
+            android:layout_row="0"
+            android:layout_column="0"
+            ></cn.alubi.myapplication.Adapter.ImageTextButton>
+
+        <cn.alubi.myapplication.Adapter.ImageTextButton
+            android:id="@+id/btn_setOffset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/my_margin"
+            android:layout_marginRight="@dimen/my_margin"
+            android:layout_marginBottom="@dimen/my_margin"
+            android:layout_row="0"
+            android:layout_column="1"
+            ></cn.alubi.myapplication.Adapter.ImageTextButton>
+
+        <cn.alubi.myapplication.Adapter.ImageTextButton
+            android:id="@+id/btn_resetOffset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/my_margin"
+            android:layout_marginRight="@dimen/my_margin"
+            android:layout_marginBottom="@dimen/my_margin"
+            android:layout_row="0"
+            android:layout_column="2"
+            ></cn.alubi.myapplication.Adapter.ImageTextButton>
+
+        <cn.alubi.myapplication.Adapter.ImageTextButton
+            android:id="@+id/btn_startFlashLog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/my_margin"
+            android:layout_marginRight="@dimen/my_margin"
+            android:layout_marginBottom="@dimen/my_margin"
+            android:layout_row="1"
+            android:layout_column="0"
+            ></cn.alubi.myapplication.Adapter.ImageTextButton>
+
+        <cn.alubi.myapplication.Adapter.ImageTextButton
+            android:id="@+id/btn_stopFlashLog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/my_margin"
+            android:layout_marginRight="@dimen/my_margin"
+            android:layout_marginBottom="@dimen/my_margin"
+            android:layout_row="1"
+            android:layout_column="1"
+            ></cn.alubi.myapplication.Adapter.ImageTextButton>
+
+        <cn.alubi.myapplication.Adapter.ImageTextButton
+            android:id="@+id/btn_clearFlashLog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/my_margin"
+            android:layout_marginRight="@dimen/my_margin"
+            android:layout_marginBottom="@dimen/my_margin"
+            android:layout_row="1"
+            android:layout_column="2"
+            ></cn.alubi.myapplication.Adapter.ImageTextButton>
+
+        <cn.alubi.myapplication.Adapter.ImageTextButton
+            android:id="@+id/btn_saveFlashLog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/my_margin"
+            android:layout_marginRight="@dimen/my_margin"
+            android:layout_marginBottom="@dimen/my_margin"
+            android:layout_row="2"
+            android:layout_column="0"
+            ></cn.alubi.myapplication.Adapter.ImageTextButton>
+
+        <cn.alubi.myapplication.Adapter.ImageTextButton
+            android:id="@+id/btn_fullFlashErase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/my_margin"
+            android:layout_marginRight="@dimen/my_margin"
+            android:layout_marginBottom="@dimen/my_margin"
+            android:layout_row="2"
+            android:layout_column="1"
+            ></cn.alubi.myapplication.Adapter.ImageTextButton>
+
+    </GridLayout>
+
+</LinearLayout>

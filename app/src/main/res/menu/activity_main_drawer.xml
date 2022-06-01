@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_connect"
+            android:icon="@drawable/ic_menu_connect"
+            android:title="Control Parameter"
+            />
+        <item
+            android:id="@+id/nav_realtime"
+            android:icon="@drawable/ic_menu_realtime"
+            android:title="RealTime"/>
+        <item
+            android:id="@+id/nav_3d_model"
+            android:icon="@drawable/ic_menu_3d_model"
+            android:title="3D Model"/>
+        <item
+            android:id="@+id/nav_function"
+            android:icon="@drawable/ic_menu_function"
+            android:title="Function"/>
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_share"
+                    android:icon="@drawable/ic_menu_website"
+                    android:title="Website"/>
+                <!--<item
+                    android:id="@+id/nav_send"
+                    android:icon="@drawable/ic_menu_send"
+                    android:title="Send"/>
+                    -->
+            </group>
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,101 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 23
+    lintOptions {
+        abortOnError false
+    }
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.android.support:appcompat-v7:23.4.0'
+    implementation 'com.android.support:design:23.4.0'
+
+}
+
+task clearJar(type: Delete) {
+    delete 'build/outputs/LpresearchLib.jar'
+}
+
+//task makeJar(type: Copy) {
+//    from('build/intermediates/bundles/release/')
+//    into('build/outputs/')
+//    include('classes.jar')
+//    rename ('classes.jar', 'LpresearchLib.jar')
+//}
+
+task makeJar(type: Jar, dependsOn: ['compileReleaseJavaWithJavac']) {
+    //appendix = 'demo'
+    baseName = 'LpresearchLib'
+    version = '3.7.0'
+    //classifier = 'release'
+    //后缀名
+    extension = 'jar'
+    //最终的 Jar 包名，如果没设置，默认为 [baseName]-[appendix]-[version]-[classifier].[extension]
+    //archiveName = 'Demo.jar'
+    //需打包的资源所在的路径集
+    def srcClassDir = [project.buildDir.absolutePath + "/intermediates/classes/release"]
+    //初始化资源路径集
+    from srcClassDir
+    //去除路径集下部分的资源
+    exclude 'cn/alubi/lpresearch_library/BuildConfig.class'
+    exclude '**/R.class'
+    exclude '**/R\$*.class'
+    //只导入资源路径集下的部分资源
+    include 'cn/alubi/lpresearch_library/**/*.class'
+    //into('build/outputs/')
+}
+
+/*
+This proguard configuration is not working with newer Android Studio 3.4.1
+Disabled it for now
+
+task proguardJar(dependsOn: ['makeJar'], type: proguard.gradle.ProGuardTask) {
+    //Android 默认的 proguard 文件
+    configuration android.getDefaultProguardFile('proguard-android.txt')
+    //manifest 注册的组件对应的 proguard 文件
+    configuration 'proguard-rules.pro'
+    String inJar = makeJar.archivePath.getAbsolutePath()
+    //输入 jar
+    injars inJar
+    //输出 jar
+    outjars inJar.substring(0, inJar.lastIndexOf(File.separator)) + "/proguard-${makeJar.archiveName}"
+    //设置不删除未引用的资源(类，方法等)
+    dontshrink
+    Plugin plugin = getPlugins().hasPlugin("AppPlugin") ?
+            getPlugins().findPlugin("AppPlugin") :
+            getPlugins().findPlugin("LibraryPlugin")
+    if (plugin != null) {
+        List<String> runtimeJarList
+        if (plugin.getMetaClass().getMetaMethod("getRuntimeJarList")) {
+            runtimeJarList = plugin.getRuntimeJarList()
+        } else if (android.getMetaClass().getMetaMethod("getBootClasspath")) {
+            runtimeJarList = android.getBootClasspath()
+        } else {
+            runtimeJarList = plugin.getBootClasspath()
+        }
+        for (String runtimeJar : runtimeJarList) {
+            //给 proguard 添加 runtime
+            libraryjars(runtimeJar)
+        }
+    }
+}
+*/
+
+makeJar.dependsOn(clearJar,build)
+//在终端执行生成JAR包
+// gradlew makeJar

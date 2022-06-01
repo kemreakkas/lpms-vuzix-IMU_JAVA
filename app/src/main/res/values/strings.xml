@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name" translatable="false">My LPMS-B2</string>
+
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="alubi" translatable="false">www.lp-research.com</string>
+    <string name="action_settings" translatable="false">Settings</string>
+    <string name="action_share" translatable="false">Share</string>
+    <string name="disconnect" translatable="false">Disconnect</string>
+    <string name="alldisconnect" translatable="false">AllDisconnect</string>
+    <string name="Classic_scan" translatable="false">Classic Scan </string>
+    <string name="BLE_scan" translatable="false">BLE Scan</string>
+    <string name="service_title" translatable="false">LpmsB2 Service</string>
+    <string name="service_text" translatable="false">LpmsB2 Service running</string>
+    <!--Activity Strings-->
+    <string name="BLEConnect" translatable="false">BleConnect</string>
+    <string name="lpmsb2" translatable="false">LPMS-B2</string>
+    <string name="connect" translatable="false">Connect</string>
+    <!--Fragment Strings-->
+    <string name="model" translatable="false">3D Model</string>
+
+</resources>
